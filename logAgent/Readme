@@ -1,0 +1,5 @@
+# 简介
+- conf模块负责解析配置
+- kafka模块负责连接kafka和生产消息
+- etcd模块负责获取初始配置和监听配置的变化,并通知taillog
+- taillog模块从etcd获取配置,还负责运行TailTask任务进行日志收集并发送到kafka,并结合etcd的watch进行配置热更新
